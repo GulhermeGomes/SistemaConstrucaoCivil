@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Projeto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            width: 80%;
+            margin: 20px auto;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin: 20px auto;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Projetos</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="chamadaservlet" method="post">
+                <label for="txtcnpj">CNPJ:</label>
+                <input type="text" id="txtcnpj" name="txtcnpj" autocomplete="off" required>
+            
+                <label for="txtnomeempresa">Nome da Empresa:</label>
+                <input type="text" id="txtnomeempresa" name="txtnomeempresa" autocomplete="off" required>
+            
+                <label for="txtnomeprojeto">Nome do Projeto:</label>
+                <input type="text" id="txtnomeprojeto" name="txtnomeprojeto" autocomplete="off" required>
+            
+                <label for="txtquantidadem2">Quantidade de M2:</label>
+                <input type="text" id="txtquantidadem2" name="txtquantidadem2" autocomplete="off" required>
+            
+                <input type="hidden" name="acao" value="cadastro">
+                <input type="submit" value="Cadastrar Projeto">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
